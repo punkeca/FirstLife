@@ -2,6 +2,7 @@ class Minigame:
     def __init__(self, name: str, category: str):
         self.name = name
         self.category = category
+        self.gems = []
 
     def start(self):
         print(f"Starting minigame: {self.name}")

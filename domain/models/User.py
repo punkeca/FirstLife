@@ -4,9 +4,15 @@ class User:
         self.username = username
         self.password = password
         self.email = email
+        self.player
 
     def create_character(self, name: str):
-        return Player(name)
+        if(self.player): 
+            return Player
+        else: 
+            self.player = Player(name, self)
+            return self.player
+
 
     def login(self, username: str, password: str):
         return self.username == username and self.password == password
